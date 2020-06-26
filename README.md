@@ -88,14 +88,14 @@ Crie uma nova requisição do tipo GET no Insomnia/Postman colocando a rota acim
 <b>ROTA</b>: <a href="">http://localhost:3333/transactions/id</a>
 
 - <b>DELETE</b>: remove uma transação do banco de dados conforme o ID passado como parâmetro na rota.<br/>
-Crie uma nova requisição no Insomnia/Postman colocando a rota acima passando como parâmetro o ID de uma transação.
+Crie uma nova requisição no Insomnia/Postman do tipo DELETE colocando a rota acima passando como parâmetro o ID de uma transação.
 
   *Se o ID passado por parâmetro não seja existente no banco de dados será retornado uma mensagem de erro, caso contrário retornará uma resposta com status 200, referenciando sucesso na remoção da transação do banco de dados.
 
 <b>ROTA</b>: <a href="http://localhost:3333/transactions/import">http://localhost:3333/transactions/import</a>
 
 - <b>POST</b>: realiza o upload e importação dos dados de transações de um arquivo CSV.<br/>
-Crie uma nova requisição no Insomnia/Postman colocando a rota acima e no corpo utilize o formato Multipart, incluindo um campo com nome "file" do tipo File. Busque pelo arquivo na sua máquina, a formatação do arquivo do arquivo deverá ser da seguinte forma:
+Crie uma nova requisição no Insomnia/Postman do tipo POST colocando a rota acima e no corpo utilize o formato Multipart, incluindo um campo com nome "file" do tipo File. Busque pelo arquivo na sua máquina, a formatação do arquivo do arquivo deverá ser da seguinte forma:
   ```
   title, type, value, category
   Salário, income, 500, Freelance
