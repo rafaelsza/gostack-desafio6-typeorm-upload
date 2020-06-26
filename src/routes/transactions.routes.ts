@@ -10,11 +10,6 @@ import DeleteTransactionService from '../services/DeleteTransactionService';
 import ImportTransactionsService from '../services/ImportTransactionsService';
 import Transaction from '../models/Transaction';
 
-// import TransactionsRepository from '../repositories/TransactionsRepository';
-// import CreateTransactionService from '../services/CreateTransactionService';
-// import DeleteTransactionService from '../services/DeleteTransactionService';
-// import ImportTransactionsService from '../services/ImportTransactionsService';
-
 const transactionsRouter = Router();
 const upload = multer(uploadConfig);
 
@@ -22,21 +17,6 @@ transactionsRouter.get('/', async (request, response) => {
   const transactionRepository = getCustomRepository(TransactionsRepository);
   const transactions = await transactionRepository.find();
   const balance = await transactionRepository.getBalance();
-
-  /* const categoriesRepository = getRepository(Category);
-  const categories = await categoriesRepository.find(); */
-
-  /* const transactionsWithCategoryComplet = transactions.forEach(
-    transaction =>
-    { transaction.category = categories.find(
-      category => category.id === transaction.category_id),
-    }); */
-
-  /* const transactionsWithCategoryComplet = transactions.map(
-    transaction => transaction.category_id = await categoriesRepository.findOne({
-        where: { id: transaction.category_id },
-      });
-  ); */
 
   return response.json({
     transactions,
