@@ -32,7 +32,7 @@ Desafio n°6 do bootcamp GoStack, onde desenvolvemos um back-end utilizando os c
 [NodeJS](https://nodejs.org/en/download)
 e
 [Postgres](https://www.postgresql.org/download)
-instalados em sua máquina.**
+instalados.**
 
 > No projeto foi utilizado o
 [yarn](https://yarnpkg.com/getting-started/install)
